@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Iheroes } from '../iheroes';
 
 @Component({
   selector: 'app-heroes-list',
@@ -11,12 +12,13 @@ export class HeroesListComponent {
 imageWigth:number=40;
 imageMargin:number=2;
 muestraImagen:boolean=true;
+listFilter:string='';
 
 showImage():void{
   this.muestraImagen=!this.muestraImagen;
 }
-
-heroes:any[]=[
+//vinculamos con el archivo  que creamos iheroes
+heroes:Iheroes[]=[
     {
       imagen:"https://dragonball-api.com/characters/goku_normal.webp",
       nombre:"Goku",
