@@ -1,0 +1,29 @@
+
+<p>-----------------------------------------------------------------------</p>
+<br><h5 class="text-center ">Distancia entre dos puntos</h5>
+<br>
+<div class="d-flex justify-content-center align-items-center vh-90">
+    <div class="card" style="width: 32rem;">
+
+        <!-- muestra de coordenadas -->
+         <div>
+         </div>
+
+         <div class="border text-center">Escribe las distancias:
+            <br><br>
+            <div>X1: <input type="number" [(ngModel)]="puntos.x1"></div>
+            <br><br>
+            <div>Y1: <input type="number" [(ngModel)]="puntos.y1"></div>
+            <br><br>
+            <div>X2: <input type="number" [(ngModel)]="puntos.x2"></div>
+            <br><br>
+            <div>Y2: <input type="number" [(ngModel)]="puntos.y2"></div>
+            <br><br>
+
+            <button (click)="distanciaF()">Calcular</button>
+            <br><br>
+            <h5 >La distancia entre dos puntos es: {{puntos.resultado}}</h5>
+            <br>   
+         </div>
+    </div>
+</div>

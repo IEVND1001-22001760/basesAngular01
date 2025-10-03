@@ -27,4 +27,6 @@ export class OperasBasComponent {
     this.resultado=parseInt(this.num1)*parseInt(this.num2);
   }
 
+  
+
 }

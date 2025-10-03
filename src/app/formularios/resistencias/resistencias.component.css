@@ -1,0 +1,34 @@
+
+
+.color-box {
+        width: 120px;
+        height: 25px;
+        border-radius: 2px;
+        margin: 2px;
+        display: inline-block;
+        border: 1px solid transparent;
+        }
+
+.size-box {
+        width: 120px;
+        height: 45px;
+        display: inline-block;
+        }
+
+.options-wrapper { display: block; }
+
+.negro { background-color: black;} /* 1 */
+.cafe { background-color: burlywood;} /* 2 */
+.rojo { background-color: red; } /* 3 */
+.naranja {background-color: orange;} /* 4 */
+.amarillo {background-color: yellow;} /* 5 */
+.verde { background-color: green; } /* 6 */
+.azul { background-color: blue; } /* 7 */
+.morado { background-color: purple;} /* 8 */
+.grisF { background-color: gray;} /* 9 */
+.gris { background-color: darkgrey;}/* 10 */
+.dorado {background-color: goldenrod;}
+.plata {background-color: silver;}
+
+
+

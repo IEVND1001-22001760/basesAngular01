@@ -1,0 +1,97 @@
+<p>-----------------------------------------------------------------------</p>
+<div class="container-fluid p-4">
+  <h5 class="text-center mb-4">RESISTENCIA</h5>
+
+  <div class="row justify-content-center text-center">
+
+    <!-- --------------------1RA. BANDA------------------------ -->
+    <div class="col-12 col-md-4 mb-4">
+      <h5>1ra. Banda</h5>
+      <div class="options-wrapper px-3" >
+        <div *ngFor="let c of colors">
+          <!-- [value]="c.valor" toma el valor, la clase y el nombre de el color que corresponde en ese valor -->
+           <!-- [(ngModel)]="banda1" guarda el valor elegido en la variable banda1 -->
+        <input type="radio" name="banda1" [value]="c.valor" [(ngModel)]="banda1">
+        <div class="color-box" [class]="c.clase"><span class="ms-2 text-white">{{c.valor}}</span></div>
+        
+        </div>
+      </div><br>
+      </div>
+      
+    <!-- --------------------2DA. BANDA------------------------ -->
+    <div class="col-12 col-md-4 mb-4">
+      <h5>2da. Banda</h5>
+      <div class="options-wrapper px-3" >
+        <div *ngFor="let c of colors">
+        <input type="radio" name="banda2" [value]="c.valor" [(ngModel)]="banda2">
+        <div class="color-box" [class]="c.clase"><span class="ms-2 text-white">{{c.valor}}</span></div>
+        </div>
+      </div><br>
+      </div>
+
+    <!-- --------------------3RA. BANDA------------------------ -->
+    <div class="col-12 col-md-4 mb-4">
+      <h5>3ra. Banda Multiplicador</h5>
+        <div class="options-wrapper px-3" >
+          <div *ngFor="let m of multi">
+          <input type="radio" name="banda3" [value]="m.valor" [(ngModel)]="multiplicador">
+          <div class="color-box " [class]="m.clase"><span class="ms-2 text-white">{{m.nombre}}</span></div>
+          </div>
+        </div><br>
+        </div>
+
+      <!-- ----------------------PORCENTAJE------------------------- -->
+    <div class="row justify-content-center text-center">
+        <div class="col-md-4" >
+          <div *ngFor="let p of porcentaje">
+            <input type="radio"  name="tolerancia" [value]="p.valor" [(ngModel)]="porcentajeT">
+            <div class="color-box" [ngClass]="p.clase"><span class="ms-2">{{p.nombre}}</span></div>
+          </div>
+        </div><br>
+    
+        <div class="col-md-4">
+            <br>
+            <button (click)="calcular()">Calcular</button>
+        </div>
+        </div>
+    </div>
+
+    <!-- -----RESULTADO------------ -->
+<div class="container mt-3">
+  <div class="row text-center">
+    <div class="col border p-2">Color 1</div>
+    <div class="col border p-2">Color 2</div>
+    <div class="col border p-2">Color 3</div>
+    <div class="col border p-2">Tolerancia</div>
+    <div class="col border p-2">Valor</div>
+    <div class="col border p-2">Valor máximo</div>
+    <div class="col border p-2">Valor mínimo</div>
+  </div>
+</div>
+<div class="container mt-3">
+  <div class="row text-center">
+    <div class="col border p-2 size-box text-center" [class]="color1">{{nom1}}
+      <input type="hidden" [(ngModel)]="nom1">
+    </div>
+    <div class="col border p-2 size-box text-center" [class]="color2">{{nom2}}
+      <input type="hidden" [(ngModel)]="nom2">
+    </div>
+    <div class="col border p-2 size-box " [class]="color3">{{nom3}}
+      <input type="hidden" [(ngModel)]="nom3">
+    </div>
+    <div class="col border p-2 text-center" [class]="colorP">{{nomP}}
+      <input type="hidden" [(ngModel)]="nomP">
+    </div>
+    <div class="col border p-2 text-center">{{total}}</div>
+    <div class="col border p-2 text-center" >{{valorMax}}</div>
+    <div class="col border p-2 text-center" >{{valorMin}}</div>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+
